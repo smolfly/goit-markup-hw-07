@@ -69,9 +69,8 @@
   border-radius: 4px;
   color: $icon-gray-color;
 
-  transition-property: color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $time $cubic;
+  transition: border-color $time $cubic;
 }
 
 .client-logo:hover,

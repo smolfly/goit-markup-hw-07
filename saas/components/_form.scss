@@ -8,7 +8,7 @@
 .title-modal {
   margin: 0;
   margin-bottom: 12px;
-  font-family: Roboto;
+  font-family: $main-font;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -26,8 +26,8 @@
   letter-spacing: 0.01em;
   text-align: left;
 
-  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color $time $cubic;
+  transition: fill $time $cubic;
 }
 
 .input-form {
@@ -41,8 +41,8 @@
   border-radius: 4px;
   cursor: pointer;
 
-  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color $time $cubic;
+  transition: fill $time $cubic;
 }
 
 .icon-name {
@@ -52,8 +52,8 @@
   width: 18px;
   height: 18px;
 
-  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color $time $cubic;
+  transition: fill $time $cubic;
 }
 
 textarea {
@@ -65,7 +65,7 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color $time $cubic;
 }
 
 textarea::placeholder {
