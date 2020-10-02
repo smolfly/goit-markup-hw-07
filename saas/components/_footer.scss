@@ -66,8 +66,11 @@
   display: flex;
 }
 
-.follow-item:not(:last-child) {
-  margin-right: 10px;
+.follow-item {
+
+  &:not(:last-child) {
+    margin-right: 10px;
+}
 }
 
 .sn-footer {
@@ -84,6 +87,10 @@
 
   transition: background-color $time $cubic;
 
+  &:hover,
+  &:focus {
+  background-color: $accent-color;
+}
 }
 
 .icon-footer {
@@ -92,10 +99,7 @@
   fill: currentColor;
 }
 
-.sn-footer:hover,
-.sn-footer:focus {
-  background-color: $accent-color;
-}
+
 
 /* Форма Футера */
 

@@ -4,21 +4,22 @@
   display: flex;
 }
 
-.client-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 
 .client-item {
   width: calc((100%-5 * 30px) / 6);
-}
 
-.client-item {
   display: flex;
   width: 170px;
   height: 90px;
   padding: 0;
   justify-content: center;
   align-items: center;
+
+
+  &:not(:last-child) {
+  margin-right: 30px;
+}
 }
 
 .first-company {
@@ -69,12 +70,12 @@
   border-radius: 4px;
   color: $icon-gray-color;
 
-  transition: color $time $cubic;
-  transition: border-color $time $cubic;
-}
+  transition: border-color, color, $time $cubic;
 
-.client-logo:hover,
-.client-logo:focus {
+
+&:hover,
+&:focus {
   color: $accent-color;
   border-color: $accent-color;
+}
 }

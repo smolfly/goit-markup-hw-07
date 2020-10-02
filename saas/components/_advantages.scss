@@ -27,13 +27,13 @@
 
 .advantages-item {
   width: calc((100% - 90px) / 4);
-}
 
-.advantages-item:not(:last-child) {
+
+&:not(:last-child) {
   margin-right: 30px;
 }
 
-.advantages-item::before {
+&::before {
   display: block;
   content: "";
   height: 120px;
@@ -43,4 +43,23 @@
   background-color: $secondary-gray-color;
   border-radius: 4px;
   margin-bottom: 30px;
+ }
 }
+
+.icon-details::before {
+  background-image: url(../images/icons/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icons/clock.svg);
+}
+
+.icon-plan::before {
+  background-image: url(../images/icons/diagram.svg);
+}
+
+.icon-tech::before {
+  background-image: url(../images/icons/astronaut.svg);
+}
+
+

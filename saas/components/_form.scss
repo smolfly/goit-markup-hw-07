@@ -26,8 +26,14 @@
   letter-spacing: 0.01em;
   text-align: left;
 
-  transition: outline-color $time $cubic;
-  transition: fill $time $cubic;
+  transition: outline-color, fill, $time $cubic;
+
+  &:focus-within .icon-name,
+  &:focus-within .input-form {
+  outline-color: $accent-color;
+  fill: $accent-color;
+}
+
 }
 
 .input-form {
@@ -52,8 +58,7 @@
   width: 18px;
   height: 18px;
 
-  transition: outline-color $time $cubic;
-  transition: fill $time $cubic;
+  transition: outline-color, fill, $time $cubic;
 }
 
 textarea {
@@ -66,9 +71,9 @@ textarea {
   border-radius: 4px;
   resize: none;
   transition: outline-color $time $cubic;
-}
 
-textarea::placeholder {
+
+ &::placeholder {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -77,15 +82,12 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-textarea:focus {
+ &:focus {
   outline-color: $accent-color;
+}
 }
 
-.name-form:focus-within .icon-name,
-.name-form:focus-within .input-form {
-  outline-color: $accent-color;
-  fill: $accent-color;
-}
+
 
 .comments {
   width: 448px;
@@ -108,9 +110,8 @@ textarea:focus {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
 
-.conditions-text::before {
+  &::before {
   display: inline-block;
   content: "";
   background-repeat: no-repeat;
@@ -122,6 +123,7 @@ textarea:focus {
   height: 15px;
   border: 2px solid $primary-text-color;
   border-radius: 4px;
+}
 }
 
 .checkbox:checked + .conditions-text::before {

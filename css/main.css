@@ -463,9 +463,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-mail,
@@ -597,6 +595,22 @@ img {
   margin-bottom: 30px;
 }
 
+.icon-details::before {
+  background-image: url(../images/icons/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icons/clock.svg);
+}
+
+.icon-plan::before {
+  background-image: url(../images/icons/diagram.svg);
+}
+
+.icon-tech::before {
+  background-image: url(../images/icons/astronaut.svg);
+}
+
 /* Услуги*/
 .services-list {
   display: flex;
@@ -604,12 +618,12 @@ img {
   padding-left: 0;
 }
 
-.services-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .services-item {
   width: calc((100% - 60px) / 3);
+}
+
+.services-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .services-title,
@@ -713,6 +727,11 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sn:hover, .sn:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
 .icon-ig,
 .icon-tw,
 .icon-fb,
@@ -722,32 +741,23 @@ img {
   fill: currentColor;
 }
 
-.sn:hover,
-.sn:focus {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-
 /* Постоянные клиенты */
 .clients-list {
   display: flex;
 }
 
-.client-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .client-item {
   width: calc((100%-5 * 30px) / 6);
-}
-
-.client-item {
   display: flex;
   width: 170px;
   height: 90px;
   padding: 0;
   justify-content: center;
   align-items: center;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .first-company {
@@ -797,12 +807,10 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color, color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-logo:hover,
-.client-logo:focus {
+.client-logo:hover, .client-logo:focus {
   color: #2196f3;
   border-color: #2196f3;
 }
@@ -893,8 +901,13 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   text-align: left;
-  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name-form:focus-within .icon-name,
+.name-form:focus-within .input-form {
+  outline-color: #2196f3;
+  fill: #2196f3;
 }
 
 .input-form {
@@ -917,8 +930,7 @@ img {
   left: 12px;
   width: 18px;
   height: 18px;
-  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline-color, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea {
@@ -943,12 +955,6 @@ textarea::placeholder {
 
 textarea:focus {
   outline-color: #2196f3;
-}
-
-.name-form:focus-within .icon-name,
-.name-form:focus-within .input-form {
-  outline-color: #2196f3;
-  fill: #2196f3;
 }
 
 .comments {
@@ -1042,11 +1048,10 @@ textarea:focus {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow, background-color, color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   background-color: #2196f3;
   color: #ffffff;
   font-weight: 500;
@@ -1082,6 +1087,11 @@ textarea:focus {
   margin-bottom: 0px;
 }
 
+.case-item:hover .text-overlay {
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .case-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -1090,13 +1100,12 @@ textarea:focus {
   margin-bottom: 30px;
 }
 
-.case-link:hover,
-.case-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .case-link {
   display: block;
+}
+
+.case-link:hover, .case-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .case-title {
@@ -1148,11 +1157,6 @@ textarea:focus {
   background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.case-item:hover .text-overlay {
-  transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1255,15 +1259,14 @@ textarea:focus {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sn-footer:hover, .sn-footer:focus {
+  background-color: #2196f3;
+}
+
 .icon-footer {
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-.sn-footer:hover,
-.sn-footer:focus {
-  background-color: #2196f3;
 }
 
 /* Форма Футера */

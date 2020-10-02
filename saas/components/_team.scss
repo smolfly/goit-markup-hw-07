@@ -12,11 +12,12 @@
 
 .team-item {
   width: calc((100% - 90px) / 4);
-}
-
-.team-item:not(:last-child) {
+  
+ &:not(:last-child) {
   margin-right: 30px;
 }
+}
+
 
 .team-name {
   color: $title-text-color;
@@ -69,6 +70,13 @@
   transition-property: background-color, color, border-radius;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
+
 }
 
 .icon-ig,
@@ -80,8 +88,3 @@
   fill: currentColor;
 }
 
-.sn:hover,
-.sn:focus {
-  background-color: $accent-color;
-  color: $primary-white-color;
-}
