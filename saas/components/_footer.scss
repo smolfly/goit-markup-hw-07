@@ -34,6 +34,10 @@
 
   transition-property: color $time $cubic;
  
+ &:hover,
+ &:focus {
+  color: $accent-color;
+}
 }
 
 .tel {
@@ -142,7 +146,7 @@
   font-size: 16px;
   line-height: 1.25;
 
-  color: var(--footer-tel-color);
+  color: $footer-contact-text-color;
 }
 
 .form-send:focus {

@@ -360,6 +360,10 @@ ul {
   padding-top: 94px;
 }
 
+img {
+  display: block;
+}
+
 /* Логотип*/
 .logo-first {
   margin-right: 93px;
@@ -436,8 +440,6 @@ ul {
 
 .site-nav .link:hover,
 .site-nav .link:focus,
-.footer-contact-link:hover,
-.footer-contact-link:focus,
 .contact-link:hover,
 .contact-link:focus {
   color: #2196f3;
@@ -487,10 +489,6 @@ ul {
 .icon-smartphone {
   width: 10px;
   height: 12px;
-}
-
-img {
-  display: block;
 }
 
 /* Герой */
@@ -1214,6 +1212,10 @@ textarea:focus {
   transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-contact-link:hover, .footer-contact-link:focus {
+  color: #2196f3;
+}
+
 .tel {
   margin-bottom: 0;
 }
@@ -1305,7 +1307,7 @@ textarea:focus {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  color: var(--footer-tel-color);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form-send:focus {
